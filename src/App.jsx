@@ -1,7 +1,18 @@
 // src/App.jsx
+import Row from './components/Grid/Row.jsx'
+import Grid from './components/Grid/Grid.jsx'
+import './App.css'
 
 const App = () => {
-  return <h1>Hello world!</h1>;
+
+  return (
+    <div className="App">
+      <Grid/>
+
+    </div>
+  )
+  
+
 };
 
 export default App;
