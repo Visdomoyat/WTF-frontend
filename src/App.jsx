@@ -1,14 +1,12 @@
 // src/App.jsx
-import Row from './components/Grid/Row.jsx'
-import Grid from './components/Grid/Grid.jsx'
+import Board from './components/Board.jsx'
 import './App.css'
 
 const App = () => {
 
   return (
     <div className="App">
-      <Grid/>
-
+      <Board/>
     </div>
   )
   
