@@ -1,14 +1,25 @@
-import React from 'react'
+import { useContext } from 'react'
+import { foodContext } from '../../App'
 
 function Key(props) {
 
+    const {guessTheFood, pressEnter, pressBackspace} = useContext(foodContext)
+    function handleClickForBig(){
+        if(props.letter === 'ENTER'){
+            pressEnter()
+        }
+        else {
+            pressBackspace()
+        }
+    }
+
+
     if (props.big){
 
-    
-  return (
-    <button
-    // onClick={()=> handleClickForBig()}
-    style={{
+    return (
+       <button
+       onClick={()=> handleClickForBig()}
+       style={{
         width: 65.4,
         height: 58,
         margin: 3,
@@ -29,7 +40,7 @@ function Key(props) {
 }
 return (
     <button
-    // onClick={()=> handleClickForSmall()}
+    onClick={()=> guessTheFood(props.letter)}
     style={{
         width: 43,
         height: 58,
